@@ -1,0 +1,455 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Graph AI</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
+<style>
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+div#content {
+	padding:			50px;
+	margin-left:		auto;
+	margin-right:		auto;
+	width:	    		800px;
+	min-height:			420px;
+	background-color:	#ffffff;
+	position:			relative;
+}
+h1 {
+	color:			#80bd01;
+	font-family: 'Lato', sans-serif;
+}
+h2 {
+	color:			#80bd01;
+	font-family: 'Lato', sans-serif;
+}
+h3 {
+	color:			#80bd01;
+	font-family: 'Lato', sans-serif;
+	margin-left:  20px;
+}
+h4 {
+	margin-left:  20px;
+}
+a {
+	text-decoration: none;
+	color: #000;
+	border-bottom: 1px solid #d4d4d4;
+}
+a:hover {
+	color: 			#fb6300;
+}
+table {
+	margin: 20px;
+	margin-left: 40px;
+	border:#ccc 1px solid;
+}
+table tr {
+	text-align: center;
+	padding-left:20px;
+}
+table td {
+	padding: 8px 24px;
+	border: 1px solid #e0e0e0;
+}
+p {
+	margin-left: 40px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="content">
+
+<h1 style="text-align:center"> Student Research Opportunities </h1>
+
+<center>
+<h4>
+Contact: <a href="https://chenxuhao.github.io/">Xuhao Chen</a> <br/>
+</h4>
+</center>
+
+<p>
+  We are looking for grad & undergrad students to join our lab.
+  Feel free to reach out if you are interested in machine learning systems, computer architecture, and/or high performance computing.
+
+  Our projects have the potential to become MEng thesis work. We have <a href="https://www.eecs.mit.edu/home/eecs-alliance/6a/">6-A program</a> opportunities available.
+  If you are interested, please send your CV to <a href="mailto:cxh@mit.edu">cxh@mit.edu</a> and fill in the
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfAwaRSct0V3gnxntv2CXUK8fum5PHSF3_ZZQlM1pgUO2MwfQ/viewform">recruiting form</a>.
+</p>
+
+
+<p>
+  <strong>Research Summary</strong>: The AI revolution is transforming various industries and having a significant impact on society.
+  However, AI is computationally expensive and hard to scale, which poses a great challenge in computer system design.
+  Our lab is broadly interested in computer system architectures and high performance computing, particularly for scaling AI and ML computation.
+</p>
+
+<p>
+  Top-tier system & HPC conferences <a href="https://www.usenix.org/conferences">[OSDI, SOSP]</a>,
+<a href="https://www.asplos-conference.org/">[ASPLOS]</a>,
+<a href="https://iscaconf.org/">[ISCA]</a>,
+<a href="https://www.vldb.org/">[VLDB]</a>,
+<a href="https://sigmod.org/">[SIGMOD]</a>
+<a href="https://supercomputing.org/">[SC]</a>,
+<a href="https://conf.researchr.org/home/ppopp-2024">[PPoPP]</a>.
+</p>
+
+
+<p>
+  <strong>Interesting MLSys topics</strong>: Transformer (Attention), Mixture-of-Experts, Vector Similarity Search, Deep Recommendation Models, Graph Machine Learning,
+ Graph Sampling, Graph Algorithms, Robotics, Large Language Models, GPU Acceleration, Model Serving,
+ Graph Databases, Graph Transformer, Diffusion, Generative AI, Reinforcement Learning.
+</p>
+
+<p>
+Below are some ongoing research projects.
+</p>
+
+<h2> Scalable Vector Database [<a href="https://elx.mit.edu/experience/c67c0e7e-34ef-4de9-a95f-05e92e5c88d3">Elx Link</a>]</h2>
+
+  <p>
+    Recent advances in deep learning models map almost all types of data (e.g., images, videos, documents) into high-dimension vectors.
+    Queries on high-dimensional vectors enable complex semantic-analysis that was previously difficult if not impossible,
+    thus they become the cornerstone for many important online services like search, eCommerce, and recommendation systems.
+  </p>
+  <p>
+    <img src="images/vector-database.png" alt="Vector Database" style="width:570px;height:300px;">
+  </p>
+
+  <p>
+    In this project we aim to build a massive-scale <strong>Vector Database</strong> on the multi-CPU and multi-GPU platform.
+    In a Vector Database, the major operation is to search the k closest vectors to a given query vector,
+    known as k-Nearest-Neighbor (kNN) search. Due to massive data scale, Approximate Nearest-Neighbor (ANN) search is used in practice instead.
+    One of the most promising ANN approaches is the graph-based approach, which first constructs a proximity graph on the dataset,
+    connecting pairs of vectors that are close to each other, then performs a graph traversal on the proximity
+    graph for each query to find the closest vectors to a query vector. In this project we will build a vector
+    database using graph-based ANN search algorithm that supports billion-scale datasets.
+  </p>
+
+  <p>
+    Qualifications:
+    <ul>
+      <li>Strong programming skills in C/C++/Python language</li>
+      <li>Experience with design and analysis of algorithms, e.g., <a href="https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/">MIT 6.1220 (previously 6.046)</a></li>
+      <li>Experience with performance engineering is a plus, e.g., <a href="https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/">MIT 6.1060 (previously 6.172)</a></li>
+      <li><a href="http://gputeachingkit.hwu.crhc.illinois.edu/">GPU/CUDA programming</a> is a plus</li>
+    </ul>
+  </p>
+
+  <p> <strong>References</strong> </p>
+  <ol>
+  <li>
+  Manohar, M., et.al.,
+  ParlayANN: Scalable and Deterministic Parallel Graph Based Approximate Nearest Neighbor Search Algorithms.
+  PPoPP 2024.
+  https://arxiv.org/pdf/2305.04359.pdf
+  </li>
+  <li>
+  Ootomo, H., et.al.,
+  CAGRA: Highly Parallel Graph Construction and Approximate Nearest Neighbor Search for GPUs.
+  https://arxiv.org/pdf/2308.15136.pdf
+  </li>
+  <li>
+  Peng, Z., et. al.,
+  iQAN: Fast and Accurate Vector Search with Efficient Intra-Query Parallelism on Multi-Core Architectures.
+  PPoPP 2023.
+  https://dl.acm.org/doi/pdf/10.1145/3572848.3577527
+  </li>
+  <li>
+  Johnson, J., Douze, M., Jegou, H. (2017).
+  Billion-scale similarity search with GPUs. IEEE Transactions on Big Data.
+  https://arxiv.org/pdf/1702.08734.pdf
+  </li>
+  <li>
+  Malkov, Y., Yashunin, D.
+  Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs.
+  TPAMI 2018.
+  https://arxiv.org/ftp/arxiv/papers/1603/1603.09320.pdf
+  </li>
+  <!--
+  <li>
+  Pham, N., Liu, T. (2022).
+  Falconn++: A Locality-sensitive Filtering Approach for Approximate Nearest Neighbor Search.
+  https://arxiv.org/pdf/2206.01382.pdf
+  </li>
+  <li>
+  Dong, W., Charikar, M., Li, K. (2011).
+  Efficient K-Nearest Neighbor Graph Construction for Generic Similarity Measures.
+  https://www.cs.princeton.edu/cass/papers/www11.pdf
+  </li>
+  -->
+  </ol>
+
+  <h2> Zero-Knowledge Proof [<a href="https://elx.mit.edu/experience/c67c0e7e-34ef-4de9-a95f-05e92e5c88d3">Elx Link</a>]</h2>
+
+    <p>
+      Zero-knowledge proof (ZKP) is a cryptographic method of proving the validity of a statement without revealing anything other than the validity of the statement itself.
+      This “zero-knowledge” property is attractive for many privacy-preserving applications, such as blockchain and cryptocurrency systems.
+      Despite its great potential, ZKP is notoriously compute intensive, which hampers its real-world adoption.
+      Recent advances in cryptography, known as zk-SNARK, have brought ZKP closer to practical use.
+      Although zk-SNARK enables fast verification of the proof, proof generation in ZKP is still quite expensive and slow.
+    </p>
+
+    <p>
+      <img src="images/zkp.png" alt="Zero-Knowledge Proof" style="width:600px;height:300px;">
+    </p>
+    <p>
+      In this project, we will explore ZKP acceleration by using algorithm innovations, software performance engineering, and parallel hardware like GPU, FPGA or even ASIC.
+      We aim to investigate and implement efficient algorithms for accelerating elliptic curve computation.
+      We will also explore acceleration opportunities for the major operations, e.g., finite field arithmetic, Multi-scalar Multiplication (MSM) and Number-theoretic transformations (NTT).
+    </p>
+
+    <p>
+      Qualifications:
+      <ul>
+        <li>Strong programming skills in C/C++ language</li>
+        <li>Experience with design and analysis of algorithms, e.g., <a href="https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/">MIT 6.1220 (previously 6.046)</a></li>
+        <li>Experience with performance engineering is a plus, e.g., <a href="https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/">MIT 6.1060 (previously 6.172)</a></li>
+        <li><a href="http://gputeachingkit.hwu.crhc.illinois.edu/">GPU/CUDA</a> and/or Rust/Web Assembly/Javascript programming is a plus</li>
+      </ul>
+    </p>
+
+    <p> <strong>References</strong> </p>
+    <ol>
+    <li>
+      Zhuoran Ji, et. al., Accelerating Multi-Scalar Multiplication for Efficient Zero Knowledge Proofs with Multi-GPU Systems, ASPLOS 2024. https://dl.acm.org/doi/10.1145/3620666.3651364
+    </li>
+    <li>
+      Weiliang Ma, et. al., GZKP: A GPU Accelerated Zero-Knowledge Proof System. ASPLOS 2023. https://doi.org/10.1145/3575693.3575711
+    </li>
+  </ol>
+
+    <h2> Deep Recommendation System [<a href="https://elx.mit.edu/experience/c67c0e7e-34ef-4de9-a95f-05e92e5c88d3">Elx Link</a>]</h2>
+
+      <p>
+        Deep Learning Recommendation Models (DLRMs) are widely used across industry to provide personalized recommendations to users and consumers.
+        Specifically, they are the backbone behind user engagement for industries such as ecommerce, entertainment, and social networks.
+        DLRMs have two stages: (1) training, in which the model learns to minimize the difference between predicted and actual user interactions,
+        and (2) inference, in which the model provides recommendations based on new data.
+        Traditionally, GPUs have been the hardware component of choice for DLRM training because of the high computational demand.
+        In contrast, CPUs have been widely used for DLRM inference due to tight latency requirements that restrict the batch size.
+        An existing bottleneck in inference is the high computational and memory bandwidth, which contribute greatly to loads on data centers and computing clusters.
+      </p>
+
+      <p>
+        <img src="images/DRS.png" alt="Deep Recommendation System" style="width:370px;height:300px;">
+      </p>
+
+      <p>
+        In this project, we will focus on exploring GPU optimizations to the embedding stage of the DLRM inference pipeline, which has traditionally only utilized CPUs.
+        Initially, we would like to explore CPU-GPU coupled schemes, for instance using GPUs as extra cache space (e.g. to store more embeddings or to memoize sparse feature computations),
+        and multi-GPU cluster computation in order to further accelerate inference for more complex models.
+        The goal is to coalesce existing inference frameworks, profile them, and implement novel ones to exhibit substantial speedup for DLRM inference on GPUs.
+      </p>
+
+      <p>
+        Qualifications:
+        <ul>
+          <li>Strong programming skills in C/C++/Python language</li>
+          <li>Experience with design and analysis of algorithms, e.g., <a href="https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/">MIT 6.1220 (previously 6.046)</a></li>
+          <li>Experience with performance engineering is a plus, e.g., <a href="https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/">MIT 6.1060 (previously 6.172)</a></li>
+          <li><a href="http://gputeachingkit.hwu.crhc.illinois.edu/">GPU/CUDA programming</a> is a plus</li>
+        </ul>
+      </p>
+
+          <p> <strong>References</strong> </p>
+      <ol>
+      <li>R. Jain, et. al.,
+        Optimizing CPU Performance for Recommendation Systems At-Scale. ISCA ’23. https://doi.org/10.1145/3579371.3589112
+      </li>
+      <li>
+      H. Ye et. al.,
+      GRACE: A Scalable Graph-Based Approach to Accelerating recommendation model inference. ASPLOS 2023. https://doi.org/10.5281/zenodo.7699872
+      </li>
+      <li>
+       D. H. Kurniawan,et. al.,
+      EVStore: Storage and Caching Capabilities for Scaling Embedding Tables in Deep Recommendation Systems. ASPLOS ‘23. https://doi.org/10.1145/3575693.3575718
+     </li>
+    </ol>
+
+<h2> Graph AI System [<a href="https://elx.mit.edu/experience/c67c0e7e-34ef-4de9-a95f-05e92e5c88d3">Elx Link</a>]</h2>
+
+  <p>
+      Deep Learning is good at capturing hidden patterns of <strong>Euclidean</strong> data (images, text, videos).
+      But what about applications where data is generated from <strong>non-Euclidean</strong> domains,
+      represented as graphs with complex relationships and interdependencies between objects?
+      That’s where <a href= "https://aimagazine.com/machine-learning/what-graph-ai">Graph AI</a>
+      or <a href= "https://arxiv.org/pdf/2105.00696.pdf">Graph ML</a> come in.
+      Handling the complexity of graph data and graph algorithms requires innovations in every layer of the computer system, including both software and hardware.
+  </p>
+      <p>
+        <img src="images/gai.png" alt="An overview of graph neural networks for anomaly detection in e-commerce" style="width:700px;height:180px;">
+      </p>
+  <p>
+    In this project we will design and build efficient graph AI systems to support scalable graph AI computing.
+    In particular, we will build software frameworks for Graph AI and ML, e.g., graph neural networks (GNN), graph pattern mining (GPM) and graph sampling,
+    and hardware accelerators that further enhance system efficiency and scalability. </p>
+  <p>
+    Qualifications:
+    <ul>
+      <li>Strong programming skills in C/C++/Python language</li>
+      <li>Experience with design and analysis of algorithms, e.g., <a href="https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/">MIT 6.1220 (previously 6.046)</a></li>
+      <li>Basic understanding of computer architecture, e.g., <a href="https://6191.mit.edu/">MIT 6.1910 (previously 6.004)</a></li>
+      <li>Experience with performance engineering is a plus, e.g., <a href="https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/">MIT 6.1060 (previously 6.172)</a></li>
+      <li><a href="http://gputeachingkit.hwu.crhc.illinois.edu/">GPU/CUDA programming</a> is a plus</li>
+      <li>Familiarity with deep learning frameworks is a plus, e.g., PyTorch</li>
+    </ul>
+  </p>
+
+      <p> <strong>References</strong> </p>
+
+<ol>
+  <li>
+    gSampler, SOSP 2023  [<a href="https://assets.amazon.science/ed/4d/71e8885c4234a7f98b109674a6a0/gsampler-general-and-efficient-gpu-based-graph-sampling-for-graph-learning.pdf">PDF</a>] [<a href="https://github.com/gsampler9/gSampler">Code</a>]
+  </li>
+  <li>
+    NextDoor, EuroSys 2021 [<a href="https://github.com/chenxuhao/ReadingList/blob/master/sampling/NextDoor.pdf">PDF</a>][<a href="https://github.com/plasma-umass/nextdoor">Code</a>]
+  </li>
+  <li>
+    Scalable graph sampling on gpus with compressed graph, CIKM 2022, https://dl.acm.org/doi/pdf/10.1145/3511808.3557443
+  </li>
+  </ol>
+
+<h2> Graph AI for Financial Security  [<a href="https://elx.mit.edu/experience/e773c545-183f-4d4a-8c2b-06c56efb9e0f">Elx Link</a>] </h2>
+  <p>
+    The advent of cryptocurrency introduced by Bitcoin ignited an explosion of technological
+    and entrepreneurial interest in payment processing.
+    Dampening this excitement was Bitcoin’s bad reputation.
+    Many criminals used Bitcoin’s pseudonymity to hide in plain sight,
+    conducting ransomware attacks and operating dark marketplaces for the exchange of illegal goods and services.
+  </p>
+      <p>
+        <img src="images/GNN-Fraud.webp" alt="An overview of graph neural networks for anomaly detection in e-commerce" style="width:500px;height:300px;">
+      </p>
+  <p>
+    This project offers a golden opportunity to apply machine learning for financial forensics.
+    The data of Bitcoin transactions naturally forms a financial transaction graph, in which we can apply graph machine learning and graph pattern mining techniques to automatically detect illegal activities.
+    We will explore the identification and clustering of frequent subgraphs to uncover money laundering patterns, and conduct link predictions on the wallets (nodes) to unveil the malicious actor behind the scene.
+  </p>
+<p>
+  Qualifications:
+
+  <ul>
+    <li>Strong programming skills in Python and C/C++ language</li>
+    <li>Background and prior experience with design and analysis of algorithms (e.g., 6.046)</li>
+    <li>Some familiarity with deep learning frameworks such as PyTorch</li>
+  </ul>
+</p>
+
+    <p> <strong>References</strong> </p>
+
+<ol>
+  <li>
+  GraphPrompt, https://arxiv.org/pdf/2302.08043.pdf
+  </li>
+  <li>
+  Glass, https://openreview.net/pdf?id=XLxhEjKNbXj
+  </li>
+</ol>
+
+<h2> AI/ML for Performance Engineering [<a href="https://elx.mit.edu/experience/e773c545-183f-4d4a-8c2b-06c56efb9e0f">Elx Link</a>] </h2>
+  <p>
+    Generative AI, such as Large Language Models (LLMs), has been successfully used to generate
+    computer programs, a.k.a code generation. However, its model performance degrades substantially
+    when asked to do code optimization a.k.a. software performance engineering (SPE), i.e., generate
+    not just correct but fast code.
+  </p>
+      <p>
+        <img src="images/fast-coder.png" alt="An overview of AI coder" style="width:700px;height:150px;">
+      </p>
+  <p>
+    This project aims to leverage the capabilities of LLMs to revolutionize the area of automatic code optimization.
+    We focus on transforming existing sequential code into high-performance, parallelized code, optimized for specific parallel hardware.
+  </p>
+<p>
+  Qualifications:
+
+  <ul>
+    <li>Strong programming skills in Python and C/C++ language</li>
+    <li>Background and prior experience with design and analysis of algorithms (e.g., 6.046)</li>
+    <li>Familiarity with LLMs such as ChatGPT and Code Llama</li>
+  </ul>
+</p>
+
+    <p> <strong>References</strong> </p>
+
+<ol>
+  <li>
+  Performance-Aligned LLMs for Generating Fast Code, https://arxiv.org/pdf/2404.18864
+  </li>
+  <li>
+    Learning Performance Improving Code Edits, https://pie4perf.com/
+  </li>
+  <li>
+  Can Large Language Models Write Parallel Code? https://arxiv.org/pdf/2401.12554.pdf
+  </li>
+  <li>
+    MPIrigen: MPI Code Generation through Domain-Specific Language Models, https://arxiv.org/pdf/2402.09126.pdf
+  </li>
+  <li>
+    The Landscape and Challenges of HPC Research and LLMs, https://arxiv.org/pdf/2402.02018.pdf
+  </li>
+</ol>
+
+
+<h2> Scalable Graph Transformer  [<a href="https://elx.mit.edu/experience/5168d52b-590a-4c2a-abf6-9542e79438c7">Elx Link</a>] </h2>
+
+<p>
+  Transformer [1], the engine behind ChatGPT,
+  has yielded competitive results in many domains such as natural language processing (NLP) [2]
+  and computer vision (CV) [3] due to its unique attention mechanism
+  where each element in the input data pays attention to every other element.
+</p>
+    <p>
+      <img src="images/GT.png" alt="Graph Transformer" style="width:500px;height:360px;">
+    </p>
+
+<p>
+  Recently Graph Transformer [4,5,6] has been proposed
+  by introducing the attention mechanism into graph machine learning.
+  As opposed to graph neural networks (GNNs) and graph convolutional networks (GCNs)
+  where nodes use neighborhood aggregation (a.k.a. message passing) mechanisms
+  to perform inference on graph data, graph transformers use the self-attention mechanism
+  that can capture long-range interactions between nodes.
+  However, current graph transformers do not scale to large graphs
+  because of the expensive computation and memory consumption.
+  Thus, this project aims to design a graph transformer with hierarchical multi-head attention (MHA)
+  to improve node classification for graphs on the order of 100k-100M nodes.
+</p>
+
+<p>
+  Qualifications:
+  <ul>
+  <li>Strong programming skills in Python and C/C++ language </li>
+  <li>Background and prior experience with design and analysis of algorithms (e.g., 6.046)</li>
+  <li>Some familiarity with deep learning frameworks such as PyTorch</li>
+  </ul>
+</p>
+
+    <p> <strong>References</strong> </p>
+<ol>
+<li> <a href= "https://aimagazine.com/machine-learning/what-graph-ai">Graph AI</a> and <a href= "https://arxiv.org/pdf/2105.00696.pdf">Graph ML</a>
+</li>
+<li> “Attention Is All You Need”. [<a href= "http://arxiv.org/abs/1706.03762">paper</a>]
+</li>
+<li> BERT [<a href= "http://arxiv.org/abs/1810.04805">paper</a>]
+</li>
+<li> “An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale”. [<a href= "https://arxiv.org/abs/2010.11929">paper</a>]
+</li>
+<li>Graphormer  [<a href= "https://openreview.net/forum?id=OeWooOxFwDa">paper</a>]
+</li>
+<li>GraphGPS [<a href= "https://arxiv.org/pdf/2205.12454.pdf">paper</a>] [<a href= "https://github.com/rampasek/GraphGPS">code</a>]
+</li>
+<li>Spectral attention network [<a href= "https://arxiv.org/abs/2106.03893">paper</a>]
+</li>
+</ol>
+
+</div>
+
+</body>
+</html>
