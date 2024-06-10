@@ -1,6 +1,6 @@
 ---
 title: "Faculty"
-excerpt: "Dr. Xuhao Chen <br/> <img src='/images/cxh.png'>"
+excerpt: "Dr. Xuhao Chen <br/> <img src='/images/cxh.png' width='260' height='260'>"
 collection: team
 ---
 
