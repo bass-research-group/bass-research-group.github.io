@@ -206,6 +206,21 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
+  deadlines:
+    output: true
+    permalink: /:collection/:path/
+  projects:
+    output: true
+    permalink: /:collection/:path/
+  team:
+    output: true
+    permalink: /:collection/:path/
+  software:
+    output: true
+    permalink: /:collection/:path/
+  openings:
+    output: true
+    permalink: /:collection/:path/
   portfolio:
     output: true
     permalink: /:collection/:path/
@@ -252,6 +267,51 @@ defaults:
       author_profile: true
       share: true
       comments: true
+  # _team
+  - scope:
+      path: ""
+      type:team 
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _projects
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _software
+  - scope:
+      path: ""
+      type: software
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _opening
+  - scope:
+      path: ""
+      type: opening
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _deadlines
+  - scope:
+      path: ""
+      type: deadlines
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
   # _portfolio
   - scope:
       path: ""
