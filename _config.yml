@@ -294,10 +294,10 @@ defaults:
       author_profile: true
       share: true
       comment: true
-  # _opening
+  # _openings
   - scope:
       path: ""
-      type: opening
+      type: openings
     values:
       layout: single
       author_profile: true
