@@ -270,7 +270,7 @@ defaults:
   # _team
   - scope:
       path: ""
-      type:team 
+      type: team 
     values:
       layout: single
       author_profile: true
