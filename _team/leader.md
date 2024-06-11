@@ -6,7 +6,7 @@ collection: team
 
 <!--- ![image info](../images/cxh.png) --->
 
-<img src="../images/cxh.png" alt="Xuhao Chen" width="160" height="175"/>
+<img src="/images/cxh.png" alt="Xuhao Chen" width="160" height="175"/>
 
 Dr. Xuhao Chen is a research scientist at [MIT CSAIL](http://www.csail.mit.edu/),
 working with [Prof. Charles E. Leiserson](https://people.csail.mit.edu/cel/) and [Prof. Arvind](http://csg.csail.mit.edu/Users/arvind).
