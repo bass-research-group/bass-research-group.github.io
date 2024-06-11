@@ -13,3 +13,4 @@ We are looking for grad and undergrad students to work on our [research projects
 If you are interested in joining our lab, please fill in the [recruiting form](https://docs.google.com/forms/d/e/1FAIpQLSfAwaRSct0V3gnxntv2CXUK8fum5PHSF3_ZZQlM1pgUO2MwfQ/viewform). 
 
 
+<img src='/images/cross-stack.png' width='360' height='500'>
