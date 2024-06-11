@@ -23,3 +23,5 @@ He is a recipient of NSF CAREER award in 2025.
 **Research Interest**: computer architecture, high performance computing, big-data management & processing, AI/ML systems.
 
 **Email**: cxh at mit.edu
+
+[Personal Page](https://chenxuhao.github.io/)
