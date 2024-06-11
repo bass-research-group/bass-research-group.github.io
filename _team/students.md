@@ -69,3 +69,14 @@ collection: team
 
 **Email**: lallison@mit.edu
 
+
+
+<img src='/images/Sophie-Lin.jpg' width='160' height='160'>
+
+[Sophie Lin](https://www.linkedin.com/in/sophie-a-lin/)
+
+**Joined**: Spring 2024
+
+**Research Interest**: GPU data management.
+
+**Email**: sophielin.net@gmail.com
