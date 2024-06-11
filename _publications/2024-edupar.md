@@ -1,12 +1,14 @@
 ---
-title: "SpeedCode: Software performance engineering education via Coding of didactic exercises"
+title: "Speedcode: Software performance engineering education via Coding of didactic exercises"
 collection: publications
 permalink: /publication/2024-edupar
 excerpt: "EduPar'24"
 date: 2024-05-27
-venue: '14th NSF/TCPP Workshop on Parallel and Distributed Computing Education (EduPar-24), in conjuction with IPDPS 2024'
-paperurl: 'https://chenxuhao.github.io/EduPar_SpeedCode.cameraready.pdf'
-citation: 'Tim Kaler, Xuhao Chen, Brian Wheatman, Dorothy Curtis, Bruce Hoppe, Tao B. Schardl, and Charles E. Leiserson, SpeedCode: Software performance engineering education via Coding of didactic exercises, <i>14th NSF/TCPP Workshop on Parallel and Distributed Computing Education (EduPar-24) </i>, in conjuction with IPDPS 2024. '
+venue: 'the 14th NSF/TCPP Workshop on Parallel and Distributed Computing Education (EduPar-24), in conjunction with IPDPS 2024'
+paperurl: 'https://chenxuhao.github.io/docs/EduPar_SpeedCode.cameraready.pdf'
+citation: "Tim Kaler, Xuhao Chen, Brian Wheatman, Dorothy Curtis, Bruce Hoppe, Tao B. Schardl, and Charles E. Leiserson,
+Speedcode: Software performance engineering education via Coding of didactic exercises,
+14th NSF/TCPP Workshop on Parallel and Distributed Computing Education (EduPar-24), in conjunction with IPDPS 2024. "
 ---
 
 This paper introduces Speedcode, an online programming platform that aims to improve the accessibility of software performance-engineering education.
