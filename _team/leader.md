@@ -1,6 +1,6 @@
 ---
 title: "Faculty"
-excerpt: "Dr. Xuhao Chen <a href="https://chenxuhao.github.io/">Personal Page</a>"
+excerpt: "Dr. Xuhao Chen"
 collection: team
 ---
 
