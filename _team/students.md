@@ -80,3 +80,28 @@ collection: team
 **Research Interest**: GPU data management.
 
 **Email**: sophielin.net@gmail.com
+
+
+
+<img src='/images/Nicole-Xu.jpg' width='160' height='160'>
+
+[Nicole Xu](https://www.linkedin.com/in/nicolexxuu/)
+
+**Joined**: Spring 2024
+
+**Research Interest**: Zero knowledge proof.
+
+**Email**: nicolexu@mit.edu
+
+
+
+<img src='/images/Grace-Wang.jpg' width='160' height='160'>
+
+[Grace Wang](https://www.linkedin.com/in/grace-wang-504292288/)
+
+**Joined**: Spring 2024
+
+**Research Interest**: Graph sampling.
+
+**Email**: gwang2@mit.edu
+
