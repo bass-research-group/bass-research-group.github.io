@@ -6,7 +6,7 @@ collection: team
 
 <img src='/images/peter-zhou.jpg' width='160' height='160'>
 
-Zixiang (Peter) Zhou
+[Zixiang (Peter) Zhou](https://stats.ioinformatics.org/people/6469)
 
 **Joined**: Fall 2023
 
@@ -17,7 +17,7 @@ Zixiang (Peter) Zhou
 
 <img src='/images/chengyuan-ma.jpg' width='160' height='160'>
 
-Chengyuan Ma
+[Chengyuan Ma](https://linkedin.com/in/chengyuan-ma-894314237/)
 
 **Joined**: Fall 2023
 
@@ -28,10 +28,44 @@ Chengyuan Ma
 
 <img src='/images/wenqi-ding.jpg' width='160' height='160'>
 
-Wenqi Ding
+[Wenqi Ding](https://www.linkedin.com/in/wenqi-ding-602aa5190/)
 
 **Joined**: Fall 2023
 
 **Research Interest**: Vector databases and ANN search.
 
 **Email**: wenqi22@mit.edu
+
+
+<img src='/images/Luc-Gaitskell.jpg' width='160' height='160'>
+
+[Luc Gaitskell](https://www.linkedin.com/in/lucgait/)
+
+**Joined**: Fall 2023
+
+**Research Interest**: Graph sampling.
+
+**Email**: lucg@mit.edu
+
+
+<img src='/images/Rachael-Cai.jpg' width='160' height='160'>
+
+[Rachael Cai](https://www.linkedin.com/in/rachael-cai-1048a7267/)
+
+**Joined**: Spring 2024
+
+**Research Interest**: Zero knowledge proof.
+
+**Email**: rachcai@mit.edu
+
+
+<img src='/images/Allison-Li.jpg' width='160' height='160'>
+
+[Allison Li](https://www.linkedin.com/in/allisonli21/)
+
+**Joined**: Spring 2024
+
+**Research Interest**: Deep Recommendation System.
+
+**Email**: lallison@mit.edu
+
