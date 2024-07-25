@@ -221,7 +221,7 @@ collections:
   openings:
     output: true
     permalink: /:collection/:path/
-  portfolio:
+  resources:
     output: true
     permalink: /:collection/:path/
   talks:
@@ -312,10 +312,10 @@ defaults:
       author_profile: true
       share: true
       comment: true
-  # _portfolio
+  # _resources
   - scope:
       path: ""
-      type: portfolio
+      type: resources
     values:
       layout: single
       author_profile: true
