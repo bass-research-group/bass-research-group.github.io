@@ -14,6 +14,9 @@ main:
     
   - title: "Openings"
     url: /openings/
+
+  - title: "Talks"
+    url: /talks/
     
   - title: "Deadlines"
     url: /deadlines/

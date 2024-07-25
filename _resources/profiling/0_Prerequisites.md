@@ -27,7 +27,7 @@ It also does not aim to:
 
 ## Required (and useful) tools
 
-To connect to the BlueCrystal supercomputer, you will need an [SSH](https://en.wikipedia.org/wiki/Secure_Shell) client.
+To connect to the supercomputer, you will need an [SSH](https://en.wikipedia.org/wiki/Secure_Shell) client.
 If you use any Unix derivative, chances are you have a working `ssh` command for this purpose; if you're on Windows, some of your options are listed [below](#suggestions-for-windows-users).
 
 To write your code, we suggest you use an editor that you can customise to your liking, e.g. indentation or syntax highlighting.

@@ -9,7 +9,7 @@ Getting Started with the HPC Course
 ===================================
 
 
-This is a collection of documentsaiming to introduce the environment and typical workflows in HPC systems.
+This is a collection of documents aiming to introduce the environment and typical workflows in HPC systems.
 The tutorial is useful for any typical High Performance Computing (HPC) course.
 Note, however, that we likely cover more material than is directly relevant for the assignments—just because a technique or issue is mentioned in this tutorial, it does _not_ mean that you necessarily need to tackle it in your submitted code or report.
 
