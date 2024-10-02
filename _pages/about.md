@@ -12,6 +12,7 @@ In particular, we design fast algorithms and build efficient software/hardware s
 We are looking for grad and undergrad students to work on our [research projects](https://people.csail.mit.edu/xchen/student-oppo.html). 
 If you are interested in joining our lab, please fill in the [recruiting form](https://docs.google.com/forms/d/e/1FAIpQLSfAwaRSct0V3gnxntv2CXUK8fum5PHSF3_ZZQlM1pgUO2MwfQ/viewform). 
 
+<img align="right" src='/images/cross-stack.png' width='360' height='500'> 
 
 Our recent focus is **scalable** and **sustainable** computing. 
 The rapid escalating complexity of emerging applications and the lagging speed of computer systems creates a huge gap. 
@@ -27,4 +28,4 @@ Beyond algorithms, software performance engineering removes software bloat and t
 For instance, data tiling improves cache/memory efficiency. 
 In addition to software, hardware architecture redesign, like processor simplification and domain
 specialization, is inevitable. One example is to build dedicated AI and machine learning accelerators. 
-<img style="float:right" src='/images/cross-stack.png' width='360' height='500'>
+
