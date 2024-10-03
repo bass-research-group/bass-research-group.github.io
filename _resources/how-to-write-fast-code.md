@@ -26,13 +26,16 @@ Please refer to the [algorithm course](https://ocw.mit.edu/courses/6-006-introdu
 
 ### Data structures 
 
-* Precomputation
+* **Precomputation** performs calculations in advance so as to avoid doing them at *mission-critical* times.
  
-* Packing and Encoding	
+* **Packing** stores more than one data value in a machine word.
+  
+* **Encoding** converts data values into a representation that requires fewer bits.
  
-* Augmentation	
+* **Augmentation** adds information to a data structure to make common operations do less work.
  
-* Caching / memoization
+* **Caching / Memoization** stores results that have been accessed recently so that the program need not compute them again.
+
  
 ### Logic
 
