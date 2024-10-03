@@ -9,7 +9,7 @@ collection: resources
 Given a slow code, the first thing to look into is to check if the algorithm is efficient enough, i.e., try to improve algorithmic complexity.
 The second step is to make sure the code does its work efficiently, i.e., do not do unnecessary or redundant work.
 Next we want to make sure the program accesses its data efficiently. 
-This is usually checked by using some profiling tools, e.g. [cachegrind](https://valgrind.org/docs/manual/cg-manual.html) to see if the program is memory or IO bound.
+This is usually checked by using some profiling tools, e.g. [cachegrind](https://valgrind.org/docs/manual/cg-manual.html), to see if the program is memory or IO bound.
 Finally we want to parallelize the program as much as possible, to fully leverage modern parallel hardware, like multicore CPUs or GPUs.
 
 1. [Algorithm](#algorithm)
@@ -65,41 +65,65 @@ Please refer to the [algorithm course](https://ocw.mit.edu/courses/6-006-introdu
 
 ## Memory Efficiency: Cache, DRAM, IO <a name="memory"></a>
 
-* **Tiling**	modifies the memory access pattern in order to reuse data already present in the cache before that data gets evicted.		
+Generally three things we can do to improve memory efficiency: 
+(1) improve data locality, 
+(2) hide memory access latency,
+and (3) improve memory bandwidth efficiency
 
-* **Prefetching**	brings data into caches before it is actually used, in order to mask the long latencies required to fetch data from memory.				
+### Improve Locality
 
-* **Pipelining** overlaps communication (data fetch) with computation .					
-
-* **Compression & Compaction**	uses lossy or lossless compression to dynamically determine output locations without introducing Fragmentation.		
+* **Tiling** modifies the memory access pattern in order to reuse data already present in the cache before that data gets evicted.
 
 * **Loop interchange**	accesses data in a way friendly to cache.
 
-* **Memory access reordering**	reorders operations or tasks to sequentialize memory accesses or reduce reuse distance.					
+* **Memory access reordering**	reorders operations or tasks to sequentialize memory accesses or reduce reuse distance.
+
+### Hide Latency
+
+* **Prefetching** brings data into caches before it is actually used, in order to mask the long latencies required to fetch data from memory.				
+
+* **Pipelining** overlaps communication (data fetch) with computation .					
+
+### Improve Bandwidth Efficiency
+
+* **Compression & Compaction**	uses lossy or lossless compression to dynamically determine output locations without introducing Fragmentation.					
 
 * **Data Layout Transformation** transforms	array-of-structures (AoS) to structure-of-arrays (SoA).
 
+
+
 ## Parallelization <a name="parallelization"></a>
 
-* **Parallel primitives composition**	composes parallel programs using parallel patterns or [primitives](https://github.com/cmuparlay/parlaylib/tree/master/examples).
+There are three major reasons for inefficient parallel code:
+(1) limited parallelism,
+(2) high synchronization overhead,
+(3) load imbalance.
 
-* **Multi-threading**	exploits thread level parallelism.
+### Increase Parallelism
 
-* **Static/Dynamic scheduling**	chooses the best task scheduling policy.			
+* **Parallel primitives composition** composes parallel programs using parallel patterns or [primitives](https://github.com/cmuparlay/parlaylib/tree/master/examples).
 
-* **Regularization**	proactively redistributes or regularizes the skewed workload.		
+* **Multi-threading** exploits thread-level parallelism (TLP). It is often used for task parallelism.
 
-* **Speculative parallelism**	runs tasks speculatively and checks that they followed a correct order, for tasks with order constraints.
-
-* **Vectorization** exploits data parallelism by using hardware vector units.
-
-* **Privatization**	avoids data race by privatizing shared variables.				
+* **Vectorization** exploits data parallelism by using hardware vector units.	
 
 * **Hybrid parallelism** combines task, data and pipeline parallelism.
 
+* **Speculative parallelism** runs tasks speculatively and checks that they followed a correct order, for tasks with order constraints.
+
+### Reduce Synchronization Overhead	
+
+* **Privatization** avoids data race by privatizing shared variables.	
+
 * **Scatter-to-gather transformation** a.k.a., push vs. pull, switches between	input and output irregularity (i.e. random accesses).			
 
-* **Lock/atomics free concurrency**	a.k.a., non-blocking algorithm or nondeterministic parallellism, removes unnecessary locks or atomic operations.				
+* **Lock/atomics free concurrency** a.k.a., *non-blocking* or *nondeterministic* parallellism, removes unnecessary locks or atomic operations.				
 
-* **Asynchronous execution** asynchronously executes tasks that do not depend on each other, i.e. removes unnecessary barrier.	
+* **Asynchronous execution** asynchronously executes tasks that do not depend on each other, i.e. removes unnecessary barriers.
+
+### Load Balancing
+
+* **Static/Dynamic scheduling**	chooses the best task scheduling policy to balance workload with minimum scheduling overhead.			
+
+* **Regularization** proactively redistributes or regularizes the skewed workload.	
 
