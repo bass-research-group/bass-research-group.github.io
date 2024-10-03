@@ -1,4 +1,10 @@
-# How to Write Fast Code? &mdash; A Quick-start Toolkit
+---
+title: "How to Write Fast Code?"
+excerpt: "A Quick-start Toolkit for Fast Coders"
+collection: resources
+---
+
+# How to Write Fast Code? &mdash; A Quick-start Toolkit for Fast Coders
 
 Given a slow code, the first thing to look into is to check if the algorithm is efficient enough, i.e., try to improve algorithmic complexity.
 The second step is to make sure the code does its work efficiently, i.e., do not do unnecessary or redundant work.
