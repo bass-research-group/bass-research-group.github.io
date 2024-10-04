@@ -26,6 +26,17 @@ Please refer to the [algorithm course](https://ocw.mit.edu/courses/6-006-introdu
 
 ## Work Efficiency: Bentley's Rules <a name="work"></a>
 
+In performance engineering, the **work** of a program (on a given input) is the sum total of all the operations executed by the program.
+You can think about work as the number of executed instructions. 
+We don’t like doing unnecessary work, because that generally means our program is wasting hardware resources.
+
+If we reduce work, our program usually runs faster (but not always, because hardware is complicated). 
+But reducing work is a good heuristic for making your code run faster: execute fewer instructions.
+
+Algorithmic engineering is a great way to reduce work, which you should be familiar with from an algorithms class.
+Here we summarize a list of techniques to reduce work, beyond algorithms, which are known as the Bentley's rules.
+We classify them into four categories: data structures, logics, loops and functions.
+
 ### Data structures 
 
 * **Precomputation** performs calculations in advance so as to avoid doing them at *mission-critical* times.
@@ -41,39 +52,43 @@ Please refer to the [algorithm course](https://ocw.mit.edu/courses/6-006-introdu
  
 ### Logic
 
-* Short-circuiting	
+* **Short-circuiting** stops evaluating as soon as you know the answer.
 
-* Algebraic Identities	
+* **Algebraic Identities** replaces expensive algebraic expressions with algebraic equivalents that require less work.
 
-* Creating a Fast Path	
+* **Creating a Fast Path** replaces expensive operations with cheaper ones under some conditions. 
 
-* Eliminate redundant computation
+<!--* **Eliminating redundant computation** removes redundant computation that is unnecessary.-->
 
 ### Loops	
 
-* Loop fusion	
+* **Loop fusion**, a.k.a jamming, is to combine multiple loops over the same index range into a single loop body, thereby saving the overhead of loop control.	
 
-* Loop hoisting	
+* **Loop hoisting**, a.k.a. loop-invariant code motion, is to avoid recomputing loop-invariant code each time through the body of a loop.
 
-* Loop unrolling
+* **Loop unrolling** combines several consecutive iterations of a loop into a single iteration, thereby reduces the total number of iterations of the loop and, consequently, the number of times that the instructions that control the loop must be executed.
 
-* Eliminate wasted iterations
+* **Eliminate wasted iterations** modifies loop bounds to avoid executing loop iterations over essentially empty loop bodies.
 
 ### Functions	
 
-* Coarsening recursion	
+* **Coarsening recursion** increases the size of the base case and handle it with more efficient code that avoids function-call overhead.	
 
-* Inlining
+* **Inlining** avoids the overhead of a function call by replacing a call to the function with the body of the function itself.
 
-* Tail-recursion elimination
+* **Tail-recursion elimination** removes the overhead of a recursive call that occurs as the last step of a function.
+  The call is replaced with a branch to the top of the function, and the storage for the local variables of the function is reused by the erstwhile recursive call.
 	
 
 ## Memory Efficiency: Cache, DRAM, IO <a name="memory"></a>
 
-Generally three things we can do to improve memory efficiency: 
+Many of the modern applications are actually memory bound, instead of compute bound, as computation in modern processors is much faster then accessing data in the memory.
+For memory bound applications, the key to improve performance is to improve memory efficiency.
+
+Generally there are three ways we can improve memory efficiency: 
 (1) improve data locality, 
 (2) hide memory access latency,
-and (3) improve memory bandwidth efficiency
+and (3) improve memory bandwidth efficiency.
 
 ### Improve Locality
 
@@ -119,9 +134,9 @@ There are three major reasons for inefficient parallel code:
 
 * **Privatization** avoids data race by privatizing shared variables.	
 
-* **Scatter-to-gather transformation**, a.k.a., push vs. pull, switches between	input and output irregularity (i.e. random accesses).			
+* **Scatter-to-gather transformation**, a.k.a. push-vs-pull, switches between	input and output irregularity (i.e. random accesses).			
 
-* **Lock/atomics free concurrency**, a.k.a., *non-blocking* or *nondeterministic* parallellism, removes unnecessary locks or atomic operations.				
+* **Lock/atomics free concurrency**, a.k.a. *non-blocking* or *nondeterministic* parallellism, removes unnecessary locks or atomic operations.				
 
 * **Asynchronous execution** asynchronously executes tasks that do not depend on each other, i.e. removes unnecessary barriers.
 
