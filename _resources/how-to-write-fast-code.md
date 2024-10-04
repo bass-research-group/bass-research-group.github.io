@@ -9,7 +9,7 @@ collection: resources
 Given a slow code, the first thing to look into is to check if the algorithm is efficient enough, i.e., try to improve algorithmic complexity.
 The second step is to make sure the code does its work efficiently, i.e., do not do unnecessary or redundant work.
 Next we want to make sure the program accesses its data efficiently. 
-This is usually checked by using some profiling tools, e.g. [cachegrind](https://valgrind.org/docs/manual/cg-manual.html), to see if the program is memory or IO bound.
+This is usually checked by using some [profiling](https://en.algorithmica.org/hpc/profiling/) tools, e.g. [cachegrind](https://valgrind.org/docs/manual/cg-manual.html), to see if the program is memory or IO bound.
 Finally we want to parallelize the program as much as possible, to fully leverage modern parallel hardware, like multicore CPUs or GPUs.
 
 1. [Algorithm](#algorithm)
@@ -22,13 +22,15 @@ Finally we want to parallelize the program as much as possible, to fully leverag
 
 Please refer to the [algorithm course](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/).
 
+[Cache-Oblivious Algorithms](https://en.algorithmica.org/hpc/external-memory/oblivious/)
+
 ## Work Efficiency: Bentley's Rules <a name="work"></a>
 
 ### Data structures 
 
 * **Precomputation** performs calculations in advance so as to avoid doing them at *mission-critical* times.
  
-* **Packing** stores more than one data value in a machine word.
+* **[Alignment and Packing](https://en.algorithmica.org/hpc/cpu-cache/alignment/)** stores more than one data value in a machine word.
   
 * **Encoding** converts data values into a representation that requires fewer bits.
  
@@ -83,7 +85,7 @@ and (3) improve memory bandwidth efficiency
 
 ### Hide Latency
 
-* **Prefetching** brings data into caches before it is actually used, in order to mask the long latencies required to fetch data from memory.				
+* **[Prefetching](https://en.algorithmica.org/hpc/cpu-cache/prefetching/)** brings data into caches before it is actually used, in order to mask the long latencies required to fetch data from memory.				
 
 * **Pipelining** overlaps communication (data fetch) with computation .					
 
@@ -91,8 +93,7 @@ and (3) improve memory bandwidth efficiency
 
 * **Compression & Compaction**	uses lossy or lossless compression to dynamically determine output locations without introducing Fragmentation.					
 
-* **Data Layout Transformation** transforms	array-of-structures (AoS) to structure-of-arrays (SoA).
-
+* **[Data Layout Transformation](https://en.algorithmica.org/hpc/cpu-cache/aos-soa/)** transforms array-of-structures (AoS) to structure-of-arrays (SoA).
 
 
 ## Parallelization <a name="parallelization"></a>
@@ -108,7 +109,7 @@ There are three major reasons for inefficient parallel code:
 
 * **Multi-threading** exploits thread-level parallelism (TLP). It is often used for task parallelism.
 
-* **Vectorization** exploits data parallelism by using hardware vector units.	
+* **[Vectorization](https://en.algorithmica.org/hpc/simd/)**, a.k.a SIMD, exploits data parallelism by using hardware vector units.	
 
 * **Hybrid parallelism** combines task, data and pipeline parallelism.
 
@@ -118,9 +119,9 @@ There are three major reasons for inefficient parallel code:
 
 * **Privatization** avoids data race by privatizing shared variables.	
 
-* **Scatter-to-gather transformation** a.k.a., push vs. pull, switches between	input and output irregularity (i.e. random accesses).			
+* **Scatter-to-gather transformation**, a.k.a., push vs. pull, switches between	input and output irregularity (i.e. random accesses).			
 
-* **Lock/atomics free concurrency** a.k.a., *non-blocking* or *nondeterministic* parallellism, removes unnecessary locks or atomic operations.				
+* **Lock/atomics free concurrency**, a.k.a., *non-blocking* or *nondeterministic* parallellism, removes unnecessary locks or atomic operations.				
 
 * **Asynchronous execution** asynchronously executes tasks that do not depend on each other, i.e. removes unnecessary barriers.
 
