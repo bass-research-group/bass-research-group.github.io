@@ -6,11 +6,17 @@ collection: resources
 
 # How to Write Fast Code? &mdash; A Quick-start Toolkit for Fast Coders
 
-Given a slow code, the first thing to look into is to check if the algorithm is efficient enough, i.e., try to improve algorithmic complexity.
-The second step is to make sure the code does its work efficiently, i.e., do not do unnecessary or redundant work.
-Next we want to make sure the program accesses its data efficiently. 
-This is usually checked by using some [profiling](https://en.algorithmica.org/hpc/profiling/) tools, e.g. [cachegrind](https://valgrind.org/docs/manual/cg-manual.html), to see if the program is memory or IO bound.
-Finally we want to parallelize the program as much as possible, to fully leverage modern parallel hardware, like multicore CPUs or GPUs.
+Given a slow code, the first thing to do is to measure it, or [benchmark](https://en.algorithmica.org/hpc/profiling/benchmarking/) it to find the *bottleneck*, 
+i.e., the Region of Interest (ROI) that most of the execution time is spent on.
+Once you find the bottleneck, there are generally four kinds of optimizations we can try to remove the bottleneck, and thus make the code faster.
+The first thing we should look into is to check if the **algorithm** is efficient, e.g., try to improve algorithmic complexity or do algorithm engineering.
+The second step is to make sure the code does its **work** efficiently, i.e., do not do unnecessary or redundant work.
+Next we want to make sure the program accesses its data (from **memory**) efficiently. 
+This is usually checked by using some [profiling](https://en.algorithmica.org/hpc/profiling/) tools, 
+e.g. [cachegrind](https://valgrind.org/docs/manual/cg-manual.html), 
+to see if the program is memory or IO bound, or more generally *communication* (e.g. PCIe or network) bound.
+Finally we want to **parallelize** the program as much as possible, to fully leverage modern parallel hardware, like multicore CPUs or GPUs.
+Note that often this process will be repeated multiple times, forming a feedback loop, as shown in the figure below.
 
 1. [Algorithm](#algorithm)
 2. [Work Efficiency](#work)
