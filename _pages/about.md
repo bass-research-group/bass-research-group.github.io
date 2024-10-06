@@ -29,3 +29,5 @@ For instance, data tiling improves cache/memory efficiency.
 In addition to software, hardware architecture redesign, like processor simplification and domain
 specialization, is inevitable. One example is to build dedicated AI and machine learning accelerators. 
 
+<img src='/images/vision.png' width='900' height='500'> 
+
