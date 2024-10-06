@@ -16,13 +16,19 @@ Finally we want to parallelize the program as much as possible, to fully leverag
 2. [Work Efficiency](#work)
 3. [Memory Efficiency](#memory)
 4. [Parallelization](#parallelization)
+   
+<img src='/images/fast-code.png' width='700' height='100'> 
 
   
 ## Algorithm: the Big O notation <a name="algorithm"></a>
 
-Please refer to the [algorithm course](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/).
+Please refer to the algorithm courses: 
+* [Introduction to Algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/)
+* [Design and Analysis of Algorithms](https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/)
+* [Algorithm Engineering](https://jshun.csail.mit.edu/6506-s23/)
 
-[Cache-Oblivious Algorithms](https://en.algorithmica.org/hpc/external-memory/oblivious/)
+More:
+* [Cache-Oblivious Algorithms](https://en.algorithmica.org/hpc/external-memory/oblivious/)
 
 ## Work Efficiency: Bentley's Rules <a name="work"></a>
 
