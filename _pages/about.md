@@ -8,9 +8,8 @@ redirect_from:
 ---
 
 Our lab targets **high-performance** computer systems,
-at the intersection of Computer Architecture, High Performance Computing and Data Systems. 
-In particular, we design fast algorithms and build efficient software/hardware systems, 
-for AI & machine learning, security & privacy, science and finance.
+at the intersection of Computer Architecture and Data Systems. 
+In particular, we design fast algorithms and build efficient software/hardware systems, for AI, big data, S&P, etc.
 We are looking for grad and undergrad students to work on our [research projects](https://people.csail.mit.edu/xchen/student-oppo.html). 
 If you are interested in joining our lab, please fill in the [recruiting form](https://docs.google.com/forms/d/e/1FAIpQLSfAwaRSct0V3gnxntv2CXUK8fum5PHSF3_ZZQlM1pgUO2MwfQ/viewform). 
 
@@ -18,8 +17,7 @@ If you are interested in joining our lab, please fill in the [recruiting form](h
 
 Our recent focus is **scalable** computing. 
 The rapid escalating complexity of emerging applications and the lagging speed of computer systems creates a huge gap. 
-For instance, the size of large language models balloons by 240 times in two years, 
-significantly outpacing the advancements in hardware.
+<!--For instance, the size of large language models balloons by 240 times in two years, significantly outpacing the advancements in hardware.-->
 This gap largely limits the problem scale that emerging technology, e.g. AI, can be applied to, known as the scalability wall.
 
 We use **performance engineering** to provide scalable computing power in the post-Moore’s Law era. 
