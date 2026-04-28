@@ -7,27 +7,23 @@ redirect_from:
   - /about.html
 ---
 
-Our lab targets **high-performance** computer systems,
-at the intersection of Computer Architecture and Data Systems. 
-In particular, we design fast algorithms and build efficient software/hardware systems, for AI, big data, S&P, etc.
-We are looking for grad and undergrad students to work on our [research projects](https://people.csail.mit.edu/xchen/student-oppo.html). 
-If you are interested in joining our lab, please fill in the [recruiting form](https://docs.google.com/forms/d/e/1FAIpQLSfAwaRSct0V3gnxntv2CXUK8fum5PHSF3_ZZQlM1pgUO2MwfQ/viewform). 
+## Research Overview
 
-<img align="right" src='/images/cross-stack.png' width='360' height='500'> 
+Our lab develops **high-performance, intelligent computer systems** at the intersection of **Computer Architecture** and **Databases**. We are broadly interested in making modern systems faster, more scalable, and easier to build. We welcome both **graduate** and **undergraduate** students to join our [research projects](https://people.csail.mit.edu/xchen/student-oppo.html). If you are interested in working with us, please fill out our [recruiting form](https://docs.google.com/forms/d/e/1FAIpQLSfAwaRSct0V3gnxntv2CXUK8fum5PHSF3_ZZQlM1pgUO2MwfQ/viewform).
 
-Our recent focus is **scalable** computing. 
-The rapid escalating complexity of emerging applications and the lagging speed of computer systems creates a huge gap. 
-<!--For instance, the size of large language models balloons by 240 times in two years, significantly outpacing the advancements in hardware.-->
-This gap largely limits the problem scale that emerging technology, e.g. AI, can be applied to, known as the scalability wall.
+### Performance Engineering for AI
 
-We use **performance engineering** to provide scalable computing power in the post-Moore’s Law era. 
-It covers three aspects: new algorithms, software performance engineering and novel hardware architectures. 
-More specifically, application domains like ML and databases continually create a need for new algorithms. 
-We explore algorithm innovations in new problem domains, and under new machine models, e.g. accelerator offloading. 
-Beyond algorithms, software performance engineering removes software bloat and tailors software to hardware. 
-For instance, data tiling improves cache/memory efficiency. 
-In addition to software, hardware architecture redesign, like processor simplification and domain
-specialization, is inevitable. One example is to build dedicated AI/ML and big-data accelerators. 
+The complexity of modern AI applications is growing rapidly, while advances in computer systems have not kept pace. This widening gap increasingly limits the performance and scalability of real-world AI and data-intensive workloads. We design **efficient and scalable algorithms, software, and hardware systems** to provide the computing foundation needed for AI and big data applications.
 
-<img src='/images/vision.png' width='900' height='500'> 
+### AI for Performance Engineering
 
+Modern systems and applications are becoming increasingly complex and labor-intensive to build and optimize. We investigate how **AI models** can assist with performance engineering, including generating **fast, efficient code** and helping design **high-performance algorithms and systems**.
+
+### Performance Engineering for Privacy
+
+We study **compilation techniques** and **hardware support** for **zero-knowledge proofs (ZKPs)** and **homomorphic encryption (HE)**. Our goal is to enable **verifiable** and **privacy-preserving execution** for sensitive retrieval and inference pipelines in modern applications.
+
+
+<!-- <img align="right" src='/images/cross-stack.png' width='360' height='500'>  -->
+
+<!-- <img src='/images/vision.png' width='900' height='500'>  -->
